@@ -1,6 +1,9 @@
 <?php
 include "connect.php";
-
+session_start();
+if (!isset($_SESSION['Admin'])) {
+    header("location:loginPage.php");  
+}
 if (isset($_POST["majorId"], $_POST["courseId"])) {
     $majorId = $_POST["majorId"];
     $courseId = $_POST["courseId"];

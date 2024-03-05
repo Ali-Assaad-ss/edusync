@@ -1,4 +1,8 @@
 <?php
+session_start();
+if (!isset($_SESSION['Admin'])) {
+    header("location:loginPage.php");  
+}
 // Fetch data from the teacher table
 $sql = "SELECT * FROM message order by id Desc";
 $result = mysqli_query($conn, $sql);

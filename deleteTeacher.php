@@ -1,6 +1,10 @@
 <?php
 // Include your database connection file (connect.php)
 include "connect.php";
+session_start();
+if (!isset($_SESSION['Admin'])) {
+    header("location:loginPage.php");  
+}
 
 // Check if the request is a POST request
 if ($_SERVER["REQUEST_METHOD"] === "POST") {

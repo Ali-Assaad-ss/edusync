@@ -1,4 +1,8 @@
 <?php
+session_start();
+if (!isset($_SESSION['Admin'])) {
+    header("location:loginPage.php");  
+}
 // Include the connection file
 include "connect.php";
 

@@ -4,6 +4,10 @@
     <select id="majorSelect" onchange="handleMajorChange2(this.value)">
         <option value="default" selected>Select a major</option>
         <?php
+        session_start();
+        if (!isset($_SESSION['Admin'])) {
+            header("location:loginPage.php");  
+        }
         $sql = "SELECT * FROM `major` WHERE 1";
         $result = $conn->query($sql);
         if ($result) {

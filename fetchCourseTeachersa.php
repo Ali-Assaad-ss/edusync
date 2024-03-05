@@ -1,4 +1,8 @@
 <?php
+session_start();
+if (!isset($_SESSION['Admin'])) {
+    header("location:loginPage.php");  
+}
 include "connect.php";
 
 // Check if the course ID is set in the POST request

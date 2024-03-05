@@ -1,6 +1,9 @@
 <?php
 include "connect.php";
-
+session_start();
+if (!isset($_SESSION['Admin'])) {
+    header("location:loginPage.php");  
+}
 if (isset($_POST["teacherId"], $_POST["courseId"])) {
     $teacherId = mysqli_real_escape_string($conn, $_POST["teacherId"]);
     $courseId = mysqli_real_escape_string($conn, $_POST["courseId"]);

@@ -1,5 +1,9 @@
 <?php
 include "connect.php";
+session_start();
+if (!isset($_SESSION['Admin'])) {
+    header("location:loginPage.php");  
+}
 
 // Check if the necessary parameters are set
 if (isset($_POST['courseId'], $_POST['courseName'], $_POST['courseDescription'], $_POST['courseLevel'])) {

@@ -1,4 +1,8 @@
 <?php
+session_start();
+if (!isset($_SESSION['Admin'])) {
+    header("location:loginPage.php");  
+}
 // Fetch data from the price table
 $sql = "SELECT * FROM price WHERE id = 1";
 $result = mysqli_query($conn, $sql);

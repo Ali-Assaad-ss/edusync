@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (!isset($_SESSION['Admin'])) {
+    header("location:loginPage.php");  
+}
 include "connect.php";
 if (isset($_POST["page"])) {
     $_SESSION['page'] = $_POST['page'];
