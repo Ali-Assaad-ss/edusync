@@ -1,0 +1,859 @@
+.teacher {
+  margin: 10px;
+}
+
+.contactUs {
+  color: white;
+  display: flex;
+  max-height: 90px;
+  max-width: 90px;
+  aspect-ratio: 1/1;
+  font-size: 90%;
+  width: 10%;
+  border-radius: 50%;
+  background-color: #2cba75;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  transition: all 0.3s ease-in-out;
+}
+.contactUs:hover {
+  cursor: pointer;
+  width: 20%;
+  background-color: #38d3ac;
+  color: white;
+}
+@media (max-width: 830px) {
+  #contactText{
+    display: none;}
+  
+}
+
+.paperPlane {
+  background-image: url("paper-plane.svg");
+  width: 25px;
+  height: 25px;
+  filter: brightness(0) invert(1);
+}
+.switch {
+  position: relative;
+  margin: 20px auto;
+  height: 26px;
+  width: 120px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3),
+    0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.switch-label {
+  position: relative;
+  z-index: 2;
+  float: left;
+  width: 58px;
+  line-height: 26px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.35);
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+}
+
+.switch-label:active {
+  font-weight: bold;
+}
+
+.switch-label-off {
+  padding-left: 2px;
+}
+
+.switch-label-on {
+  padding-right: 2px;
+}
+
+.switch-input {
+  display: none;
+}
+
+.switch-input:checked + .switch-label {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.65);
+  text-shadow: 0 1px rgba(255, 255, 255, 0.25);
+  -webkit-transition: 0.15s ease-out;
+  -moz-transition: 0.15s ease-out;
+  -o-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+}
+
+.switch-input:checked + .switch-label-on ~ .switch-selection {
+  /* Note: left: 50% doesn't transition in WebKit */
+  left: 60px;
+}
+
+.switch-selection {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 2px;
+  left: 2px;
+  width: 58px;
+  height: 22px;
+  background: #65bd63;
+  border-radius: 3px;
+  background-image: -webkit-linear-gradient(top, #9dd993, #65bd63);
+  background-image: -moz-linear-gradient(top, #9dd993, #65bd63);
+  background-image: -o-linear-gradient(top, #9dd993, #65bd63);
+  background-image: linear-gradient(to bottom, #9dd993, #65bd63);
+  -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.5),
+    0 0 2px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);
+  -webkit-transition: left 0.15s ease-out;
+  -moz-transition: left 0.15s ease-out;
+  -o-transition: left 0.15s ease-out;
+  transition: left 0.15s ease-out;
+}
+
+.switch-blue .switch-selection {
+  background: #85c0e9;
+  background-image: -webkit-linear-gradient(top, #60a1de, #85c0e9);
+  background-image: -moz-linear-gradient(top, #60a1de, #85c0e9);
+  background-image: -o-linear-gradient(top, #60a1de, #85c0e9);
+  background-image: linear-gradient(bottom, #60a1de, #85c0e9);
+}
+
+#arrow1 {
+  margin-right: 40%;
+  transform: scaleX(-1) translate(50%, -50%);
+  top: 50%;
+}
+
+#arrow2 {
+  margin-left: 40%;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+.arrow {
+  z-index: 5;
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: solid 6px #49a09d;
+  border-radius: 100%;
+  transition: all 0.2s linear;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 35%;
+    height: 10%;
+    top: 41%;
+    left: 55%;
+    background: #49a09d;
+    z-index: 2;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: all 0.2s linear;
+  }
+
+  &:after {
+    z-index: 3;
+    top: 59%;
+    left: 55%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  &:hover {
+    border: solid 8px #49a09d;
+
+    &:after,
+    &:before {
+      background: #49a09d;
+    }
+  }
+
+  &:active {
+    border: solid 8px #49a09d;
+
+    &:after,
+    &:before {
+      background: #49a09d;
+    }
+  }
+}
+
+.coupon {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  border: 1px solid #185e4e;
+  color: #185e4e;
+  margin-bottom: 7px;
+}
+.couponButton {
+  background-color: #185e4e;
+  color: white;
+  border-radius: 7px;
+  margin-bottom: 7px;
+}
+.couponButton:hover {
+  color: #185e4e;
+  background-color: white;
+}
+.bundle {
+  color: #2f6664;
+  position: absolute;
+  background-color: #fff;
+  padding: 8%;
+  border-radius: 20px;
+  z-index: 2;
+  transition: all 0.5s ease;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.bundleBack {
+  transform: rotate(5deg) translate(-45%, -50%);
+  background-color: #c7d6e7;
+  z-index: 1;
+}
+.bundleFront {
+  z-index: 4;
+}
+
+.outerb {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f8ff;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900");
+
+.pricing-wrap h4 {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  letter-spacing: 3px;
+  font-size: 22px;
+  line-height: 1.7;
+  color: #2f6664;
+}
+
+.pricing-wrap h4:before {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  background: linear-gradient(217deg, #448ad5, #b8eaf9);
+  width: 70px;
+  height: 70px;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 6px 20px 0 rgba(16, 39, 112, 0.3);
+  animation: border-transform 6s linear infinite;
+}
+
+.pricing-wrap p {
+  position: relative;
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  color: #2f6664;
+}
+
+.choose {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 4px;
+  display: inline-block;
+  text-align: center;
+  color: #ffeba7;
+  background-color: #2f6664;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  align-self: center;
+  justify-self: center;
+}
+
+.choose:hover {
+  color: #2f6664;
+  background-color: #ffeba7;
+}
+
+@keyframes border-transform {
+  0%,
+  100% {
+    border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+  }
+
+  14% {
+    border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%;
+  }
+
+  28% {
+    border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%;
+  }
+
+  42% {
+    border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%;
+  }
+
+  56% {
+    border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%;
+  }
+
+  70% {
+    border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%;
+  }
+
+  84% {
+    border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;
+  }
+}
+.hiddenPrice {
+  display: none;
+}
+.mainPopup {
+  position: relative;
+  width: 40vw;
+  height: auto;
+  min-height: 420px;
+  min-width: 300px;
+  border: 3px solid #abe6ce;
+  border-radius: 15px;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.4));
+  padding: 80px;
+  padding-bottom: 60px;
+  z-index: 1;
+}
+#mainPopupBackground {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.getStarted {
+  background-color: burlywood;
+  color: aliceblue;
+  font-size: larger;
+  text-align: center;
+}
+
+.menu {
+  background-color: #f0f8ff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+  min-height: 60px;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+}
+
+.logo {
+  background-image: url("logo.png");
+  background-repeat: no-repeat;
+  /* background-size: contain; */
+  background-size: auto 90%;
+  background-position: center left;
+  width: 20%;
+  height: 100%;
+  margin-left: 30px;
+}
+
+body {
+  height: 90vh;
+  padding: 0px;
+  margin: 0px;
+  background-image: url("1.jpg");
+  /* background-color: #194f51; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 10vh;
+  font-family: "Poppins", sans-serif;
+  background-position: center center
+}
+
+.descContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  margin-top: 8%;
+}
+
+.desc {
+  color: #fff;
+  font-size: 150%;
+  width: 40%;
+  margin-top: 10%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin: 5%;
+}
+
+
+.mgetstarted {
+  background-color: #78c8f0;
+  color: black;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  margin: 10px;
+  width: 20%;
+  max-width: 130px;
+}
+
+.select2 {
+  margin: 10px;
+}
+
+#courseInfo {
+  margin-top: 8%;
+  color: #fff;
+  font-size: 20px;
+  height: 60%;
+}
+
+#courseInfo li {
+  margin-top: 2%;
+}
+
+.teacher {
+  position: relative;
+  border-radius: 8px;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+}
+
+.teacherInfoButton {
+  background-color: #006762;
+  color: white;
+  border: 0px solid;
+  border-radius: 8px;
+  height: 100%;
+  width: 100%;
+  font-size: 80%;
+  max-width: 100px;
+  height: 100%;
+  min-width: 60px;
+  position: absolute;
+  right: 0;
+}
+
+.teacherInfoButton:hover {
+  background-color: #5fa59d;
+}
+
+#courseTeachers {
+  height: 50%;
+  overflow-y: scroll;
+  max-height: 200px;
+}
+
+.select2-container--default .select2-selection--single {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 0px;
+  border-radius: 4px;
+  margin: 0px;
+  color: #fff;
+}
+
+.select2-dropdown {
+  background-color: rgb(115 149 169);
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
+  color: #ffffff;
+  line-height: 28px;
+}
+
+/* Style the scrollbar track */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Style the scrollbar handle or thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #49a09d;
+  /* Change the color as needed */
+  border-radius: 5px;
+}
+
+/* Style the scrollbar track on hover */
+::-webkit-scrollbar-track:hover {
+  background-color: #f0f0f0;
+  /* Change the color as needed */
+}
+
+/* Style the scrollbar handle or thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #49a09d;
+  /* Change the color as needed */
+}
+
+#nextButton,
+#prevButton {
+  background-color: #006762;
+  color: white;
+  border: 0px solid;
+  border-radius: 10px;
+  font-size: 100%;
+  width: 25%;
+  height: 10%;
+  max-height: 60px;
+  position: absolute;
+  right: 2%;
+  display: none;
+  bottom: 15px;
+}
+#prevButton {
+  left: 2%;
+}
+
+#nextButton:hover,
+#prevButton:hover {
+  background-color: #5fa59d;
+}
+
+/* popup */
+
+#teacherPopup {
+  align-items: center;
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.popupContent {
+  justify-self: center;
+  align-self: center;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border: 3px solid #abe6ce;
+  height: auto;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  min-height: 420px;
+  min-width: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  z-index: 3;
+  width: 40vw;
+  padding: 80px;
+  padding-bottom: 60px;
+}
+
+.teacherInfo {
+  flex: 1;
+  padding: 20px;
+  padding-top: 5%;
+  padding-bottom: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.photo {
+  background-color: #fff;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url("profile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+#closeBtn {
+  position: absolute;
+  color: #fff;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#closeBtn:hover {
+  color: #555;
+}
+
+.teacherInfo p {
+  margin: 5px 0px;
+}
+
+.name {
+  text-align: center;
+}
+
+.teacherHeading {
+  color: #addbff;
+  margin-right: 5px;
+}
+
+.tp {
+  display: flex;
+  flex-direction: row;
+}
+
+#majorSelect,
+#courseSelect {
+  width: 100%;
+}
+
+.btn-hover {
+  width: 300px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 65px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+
+  border-radius: 50px;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-hover:hover {
+  background-position: 100% 0;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-hover:focus {
+  outline: none;
+}
+
+.btn-hover.color-1 {
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #40e495,
+    #30dd8a,
+    #2bb673
+  );
+  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+/* checkout */
+.order {
+  color: #fff;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-container {
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.order-details p {
+  margin: 5px 0;
+}
+
+.user-info {
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.order label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.order input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.order-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.order-buttons Button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.whatsapp-btn {
+  background-color: #25d366;
+  color: #fff;
+}
+
+.web-order-btn {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.or-divider {
+  margin: 0 10px;
+  font-weight: bold;
+  color: #777;
+}
+
+/* order confirmation */
+
+.orderConfimation {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.orderConfimation h1 {
+  color: #333;
+}
+
+.orderConfimation p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.thank-you-image {
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
+  display: block;
+}
+@media (max-width: 768px) {
+  body{
+    background-image: url("2.jpg");
+    background-position: center center;
+  }
+  .descContainer {
+    flex-direction: column;
+    margin-top: 12%;
+    align-items: center;
+  }
+  .desc {
+    font-size: 100%;
+  }
+  .mainPopup {
+      min-width: 240px;
+      padding: 30px;
+      padding-bottom: 60px;
+  }
+  .popupContent {
+    min-width: 240px;
+    padding: 30px;
+    padding-bottom: 60px;
+  
+}
+  .teacherInfoButton{
+    min-width: 10px;
+    font-size: 13px;
+    width: 30%;
+  }
+  .teacher label{
+    font-size: 15px;
+  }
+  .bundle{
+    padding-inline: 50px;
+    padding-block: 7px;
+    top: 45%;
+  }
+  .photo {
+    top: 10%;
+  }
+  .mb-2{
+    font-size: 20px;
+    text-align: center;
+  }
+  .mb-5{
+    font-size: 30px;
+  }
+  .mb-4{
+    font-size: 15px;
+  }
+  .arrow {
+    height: 30px;
+    width: 30px;
+    border: solid 3px #49a09d;
+    &:hover {
+      border: solid 4px #49a09d;}
+  }
+  #arrow2 {
+    margin-left: 62%;}
+    #arrow1 {
+    margin-right: 62%;}
+}
