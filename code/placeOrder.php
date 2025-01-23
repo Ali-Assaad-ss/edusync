@@ -24,7 +24,7 @@ $stmt->bind_param("ssiiids", $username, $phonenumber, $teacher, $course, $bundle
 if ($stmt->execute()) {
     echo '  </style>
   <div class="orderConfimation">
-  <img style="height:100px;width:100px" src="design/order.png" alt="Thank You Image" class="thank-you-image">
+  <img style="height:100px;width:100px" src="../design/order.png" alt="Thank You Image" class="thank-you-image">
   <h1>Thank You for Your Order!</h1>
   <p>Your order has been successfully placed. We appreciate your business.</p>
   <!-- You can display order details dynamically based on your application -->

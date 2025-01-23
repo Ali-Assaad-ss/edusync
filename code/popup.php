@@ -85,7 +85,7 @@
             top:20px;
             left: 50%;
             transform: translateX(-50%);
-            background-image: url("design/profile.png");
+            background-image: url("../design/profile.png");
             background-repeat: no-repeat;
             background-size: cover;
             border-radius: 50%;

@@ -9,7 +9,7 @@ include "connect.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EduSync</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="design/index.css">
+    <link rel="stylesheet" href="../design/index.css">
 
 
 </head>
@@ -72,7 +72,7 @@ include "connect.php";
             <div id="teacherInfo"></div>
         </div>
     </div>
-    <div onclick="navigateToContactUs()" class="contactUs"><img class="paperPlane" src="design/paper-plane.svg" alt="Paper Plane" />
+    <div onclick="navigateToContactUs()" class="contactUs"><img class="paperPlane" src="../design/paper-plane.svg" alt="Paper Plane" />
         <p id="contactText">Contact</p>
     </div>
 </body>

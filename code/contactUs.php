@@ -62,7 +62,7 @@
 <style>
   body {
     /* background: linear-gradient(45deg, #bb1881, #f88b50); */
-    background: url(design/1.jpg);
+    background: url(../design/1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     font-family: sans-serif;

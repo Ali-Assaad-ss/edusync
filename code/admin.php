@@ -17,7 +17,7 @@ include "connect.php";
     <script data-require="jquery@*" data-semver="3.0.0" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
     <script src="admin.js"></script>
-    <link rel="stylesheet" href="design/admin.css">
+    <link rel="stylesheet" href="../design/admin.css">
 </head>
 
 <body>
